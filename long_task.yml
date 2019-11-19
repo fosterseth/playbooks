@@ -1,2 +1,6 @@
--pause:
-    seconds: 30
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Sleep
+      pause:
+        minutes: 2
