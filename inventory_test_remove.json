@@ -1,12 +1,4 @@
 {
-	"windows": {
-		"hosts": ["54.71.122.113"],
-		"vars": {
-			"ansible_connection": "winrm",
-			"ansible_port": 5986,
-			"ansible_winrm_server_cert_validation": "ignore"
-		}
-	},
 	"cent": {
 		"hosts": ["54.70.19.232", "52.36.69.147"],
 		"vars": {
