@@ -1,4 +1,6 @@
-vars:
+- name: Hello World Sample
+  hosts: all
+  vars:
     num_messages: 50
   tasks:
     - debug:
