@@ -1,6 +1,8 @@
 - name: Vault lookup
   hosts: 127.0.0.1
   connection: local
+  collections:
+    - community.general
   tasks:
     - name: Return all secrets from a path
       debug:
