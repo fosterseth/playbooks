@@ -3,6 +3,6 @@
   connection: local
   tasks:
     - name: Return all secrets from a path
-      community.general.hashi_vault:
-        secret: kv/sbf:username 
-        url: http://192.168.0.110:8200
+      - community.general.hashi_vault:
+         secret: kv/sbf:username 
+         url: http://192.168.0.110:8200
