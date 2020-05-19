@@ -6,4 +6,4 @@
   tasks:
     - name: Return all secrets from a path
       debug:
-        msg: "{{ lookup('hashi_vault', 'secret=kv/sbf:username url=http://127.0.0.1:8200')}}"
+        msg: "{{ lookup('hashi_vault', 'secret=kv/sbf:username url=http://192.168.0.110:8200')}}"
