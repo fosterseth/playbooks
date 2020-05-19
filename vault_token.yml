@@ -1,10 +1,8 @@
 - name: Vault lookup
   hosts: 127.0.0.1
   connection: local
-  collections:
-    - community.general
   tasks:
     - name: Return all secrets from a path
-      hashi_vault:
+      community.general.hashi_vault:
         secret: kv/sbf:username 
         url: http://192.168.0.110:8200
