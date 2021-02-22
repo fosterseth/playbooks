@@ -1,0 +1,5 @@
+---
+- pause:
+    seconds: 3
+- debug:
+    msg: "{{ '$' * 1024}}"
