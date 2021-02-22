@@ -1,0 +1,8 @@
+---
+- hosts: all
+  vars:
+    num_messages: 10  #number of messages
+  tasks:
+    - name: Run chatty then sleep per loop
+      include_tasks: chatty_sleep.yml
+      with_sequence: 'count={{ num_messages }}'
