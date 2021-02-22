@@ -1,5 +1,5 @@
 ---
 - pause:
-    seconds: 3
+    seconds: '{{sleeptime}}'
 - debug:
     msg: "{{ '$' * 1024}}"
