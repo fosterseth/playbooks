@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 x = '''
 {
     "all": {
@@ -182,4 +185,9 @@ x = '''
 }
 '''
 
-print(x)
+def load_inventory():
+    print(x)
+
+
+if __name__ == '__main__':
+    load_inventory()
