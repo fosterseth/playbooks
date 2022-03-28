@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - ansible.builtin.debug:
+        msg: "An example message before warning: 1"
+    - ansible.builtin.debug:
+        msg: "An example message before warning: 2"
+    - ansible.builtin.debug:
+        msg: "An example message before warning: 3"
+
+    - name: Force to warn by using unsupported socks proxy
+      ansible.builtin.shell: curl --socks5 localhost:9000 http://www.ansible.com
+      args:
+        warn: true
+      changed_when: no
+      failed_when: no
+
+    - ansible.builtin.debug:
+        msg: "An example message before warning: 4"
+    - ansible.builtin.debug:
+        msg: "An example message before warning: 5"
+    - ansible.builtin.debug:
+        msg: "An example message before warning: 6"
