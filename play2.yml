@@ -1,0 +1,11 @@
+---
+- name: Run step 2
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Read and set fact
+      set_fact:
+          set_my_variable: "{{ my_variable }}"
+    - debug:
+        var: set_my_variable
