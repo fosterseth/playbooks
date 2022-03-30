@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - import_role:
+        name: foo
+        tasks_from: warning.yml
+      vars:
+        bar: baz
+    - import_role:
+        name: foo
+        tasks_from: warning.yml
+      vars:
+        bar: qux
+
+    ---
+    #roles/foo/tasks/some.yml
+    - debug:
+        var: bar
