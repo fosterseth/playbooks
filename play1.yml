@@ -1,0 +1,10 @@
+---
+- name: Run step 1
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Set out facts
+      set_stats:
+        data:
+          my_variable: "Some Value"
