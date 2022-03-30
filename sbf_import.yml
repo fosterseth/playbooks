@@ -4,17 +4,17 @@
 
   tasks:
     - import_role:
-        name: foo
-        tasks_from: warning.yml
+        name: sbf_debug
+        tasks_from: debug.yml
       vars:
-        bar: baz
+        debugmsg: baz
     - import_role:
-        name: foo
-        tasks_from: warning.yml
+        name: sbf_debug
+        tasks_from: debug.yml
       vars:
-        bar: qux
+        debugmsg: qux
 
-    ---
-    #roles/foo/tasks/some.yml
-    - debug:
-        var: bar
+    # ---
+    # #roles/foo/tasks/some.yml
+    # - debug:
+    #     var: bar
