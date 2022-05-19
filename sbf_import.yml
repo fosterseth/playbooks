@@ -13,6 +13,9 @@
         tasks_from: debug.yml
       vars:
         debugmsg: qux
+    - import_role:
+        name: sbf_debug
+        tasks_from: debug_loop.yml
 
     # ---
     # #roles/foo/tasks/some.yml

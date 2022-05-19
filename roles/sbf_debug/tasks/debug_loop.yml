@@ -1,0 +1,3 @@
+---
+- debug: msg="{{ item }}"
+  with_sequence: start=0 end=9
