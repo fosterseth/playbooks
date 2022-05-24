@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  strategy: host_pinned
+  serial: 1
   gather_facts: no
   vars:
     runit: false
