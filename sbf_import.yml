@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  strategy: free
+  strategy: host_pinned
   serial: 1
   gather_facts: no
   vars:
@@ -13,16 +13,16 @@
       when: runit
       vars:
         debugmsg: baz
-    - import_role:
-        name: sbf_debug
-        tasks_from: debug.yml
-      when: runit
-      vars:
-        debugmsg: qux
-    - import_role:
-        name: sbf_debug
-        tasks_from: debug_loop.yml
-      when: runit
+    #- import_role:
+    #    name: sbf_debug
+    #    tasks_from: debug.yml
+    #  when: runit
+    #  vars:
+    #    debugmsg: qux
+    #- import_role:
+    #    name: sbf_debug
+    #    tasks_from: debug_loop.yml
+    #  when: runit
 
     # ---
     # #roles/foo/tasks/some.yml
