@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  strategy: host_pinned
+  strategy: free
   serial: 1
   gather_facts: no
   vars:
