@@ -1,0 +1,10 @@
+---
+- name: Paws
+  hosts: all
+  vars:
+    num_messages: 2
+    sleep_time: 3
+  tasks:
+    - pause:
+        seconds: "{{ sleep_time }}"
+      with_sequence: "count={{ num_messages }}"
