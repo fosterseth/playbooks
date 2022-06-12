@@ -2,8 +2,8 @@
 - name: Paws
   hosts: all
   vars:
-    num_messages: 2
-    sleep_time: 3
+    num_messages: 180
+    sleep_time: 1
   tasks:
     - pause:
         seconds: "{{ sleep_time }}"
