@@ -13,7 +13,6 @@ def parse_args():
 
 def main():
   res=requests.get('https://raw.githubusercontent.com/fosterseth/playbooks/master/inv.json')
-  time.sleep(600)
   data=res.json()
   print(json.dumps(data, sort_keys=True, indent=2))
 if __name__ == '__main__':
