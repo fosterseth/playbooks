@@ -1,0 +1,14 @@
+---
+- name: ec2 facts
+  hosts: all
+  gather_facts: True
+  collections:
+    - amazon.aws
+  
+  tasks:
+    - name:
+      debug:
+        var: ansible_facts
+
+    - name: grab ec2_metadata_facts
+      ec2_metadata_facts:
