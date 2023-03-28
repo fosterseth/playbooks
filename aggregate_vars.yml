@@ -1,0 +1,12 @@
+---
+- name: aggregate
+  hosts: all
+  variables:
+    var1: "dog"
+  
+tasks:
+  - name: pass list to other jobs
+    ansible.builtin.set_stats:
+      data:
+        test: "{{ var1 }}{{ var1 }}"
+      aggregate: no
