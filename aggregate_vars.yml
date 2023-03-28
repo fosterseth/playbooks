@@ -1,12 +1,10 @@
 ---
 - name: agg
   hosts: all
-  vars:
-    var1: "dog"
   
   tasks:
-    - name: pass var1 to other jobs
+    - name: idk man
       ansible.builtin.set_stats:
         data:
-          test: "{{ var1 }}{{ var1 }}"
+          test: "{{ awx_workflow_job_id }}"
         aggregate: no
