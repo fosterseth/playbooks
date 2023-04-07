@@ -9,4 +9,4 @@
         data:
           asdf: "{{ awx_job_id }}"
           something_else2: "{{ var1 | default(omit) }}"
-        aggregate: no
+        aggregate: yes
