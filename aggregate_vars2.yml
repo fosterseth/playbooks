@@ -1,0 +1,12 @@
+
+---
+- name: agg
+  hosts: all
+  
+  tasks:
+    - name: idk man
+      ansible.builtin.set_stats:
+        data:
+          asdf: "{{ awx_job_id }}"
+          something_else2: "{{ var1 | default(omit) }}"
+        aggregate: yes
