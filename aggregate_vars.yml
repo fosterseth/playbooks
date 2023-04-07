@@ -7,4 +7,5 @@
       ansible.builtin.set_stats:
         data:
           test: "{{ awx_job_id }}"
+          something_else: "{{ var1 }}"
         aggregate: yes
