@@ -6,5 +6,5 @@
     - name: idk man
       ansible.builtin.set_stats:
         data:
-          test: "{{ awx_workflow_job_id }}"
+          test: "{{ awx_job_id }}"
         aggregate: no
