@@ -7,16 +7,8 @@
     - name: Create temporary file with multiline content
       copy:
         content: |
-          This is line 1 of the multiline text
-          This is line 2 with some sample content
-          This is line 3 containing more information
-          This is line 4 with additional data
-          This is line 5 for demonstration purposes
-          This is line 6 showing multiline capability
-          This is line 7 with even more content
-          This is line 8 to test the tail command
-          This is line 9 near the end
-          This is line 10 - the final line
+          This is a line
+          "This is another line"
         dest: /tmp/multiline_test_file.txt
         mode: '0644'
       register: temp_file_result
@@ -26,7 +18,7 @@
         msg: "Temporary file created at: {{ temp_file_result.dest }}"
 
     - name: Run tail command on the temporary file
-      command: tail -5 /tmp/multiline_test_file.txt
+      command: tail --bytes 20480k /tmp/multiline_test_file.txt
       register: tail_output
 
     - name: Display tail command output
