@@ -9,6 +9,7 @@
         content: |
           This is a line
           "This is another line"
+          	Tabbed	line
         dest: /tmp/multiline_test_file.txt
         mode: '0644'
       register: temp_file_result
