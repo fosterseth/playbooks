@@ -1,5 +1,5 @@
 ---
-- name: Create temporary file with multiline text and tail it \\n test
+- name: Create temporary file with multiline text and tail it \n test
   hosts: localhost
   gather_facts: false
 
