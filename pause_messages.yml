@@ -1,5 +1,6 @@
 ---
 - name: Paws
+  gather_facts: no
   hosts: all
   vars:
     num_messages: 180
